@@ -1,0 +1,18 @@
+{
+  "baseCur": "$['sell_currency']",
+  "fxRate": [
+    {
+      "counterCur": "$['sell_currency']",
+      "debitCur": "$['buy_currency']",
+      "specialRate": "$['fx_rate']"
+    }
+  ]
+}
+
+				
+				
+				
+				
+				
+				
+				

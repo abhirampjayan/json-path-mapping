@@ -22,7 +22,7 @@ public class JsonPathValuePicker {
             log.setLevel(Level.INFO);
             reader = new BufferedReader(new FileReader(path));
             JsonElement jsonElement = JsonParser.parseReader(reader);
-            this.document=Configuration.defaultConfiguration().jsonProvider().parse(jsonElement.getAsJsonObject().toString());
+            document=Configuration.defaultConfiguration().jsonProvider().parse(jsonElement.getAsJsonObject().toString());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

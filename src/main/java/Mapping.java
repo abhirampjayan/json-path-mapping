@@ -7,11 +7,13 @@ import java.io.FileReader;
 import java.util.Set;
 
 public class Mapping {
-    static JsonPathValuePicker jsonPathValuePicker=new JsonPathValuePicker("msg.json") ;
+    static JsonPathValuePicker jsonPathValuePicker=null ;
     public static void main(String[] args) {
         try{
+            jsonPathValuePicker=new JsonPathValuePicker("msg.json");
             BufferedReader reader=new BufferedReader(new FileReader("mapping.json"));
             JsonElement jsonElement = JsonParser.parseReader(reader);
+            System.out.println(jsonElement.getAsJsonObject().toString());
             JsonObject object =jsonElement.getAsJsonObject();
             jsonElement=traverse(object);
             System.out.println(jsonElement.getAsJsonObject().toString());
